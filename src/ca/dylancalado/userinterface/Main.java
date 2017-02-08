@@ -1,4 +1,4 @@
-package userinterface;
+package ca.dylancalado.userinterface;
 
 import java.io.IOException;
 

@@ -1,8 +1,10 @@
-package userinterface;
+package ca.dylancalado.userinterface;
 
+import ca.dylancalado.unittests.Experiment1UnitTests;
+import ca.dylancalado.unittests.Experiment3UnitTests;
 import ca.dylancalado.matrixexperiments.*;
-import ca.dylancalado.matrixexperiments.unittests.*;
-import ca.dylancalado.matrixexperiments.unittests.MatrixUnitTests;
+import ca.dylancalado.unittests.Experiment2UnitTests;
+import ca.dylancalado.unittests.MatrixUnitTests;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -94,7 +96,9 @@ public class UI
                 System.out.println(Experiment1UnitTests.testColumnMajorAccess());
                 break;
             case "3":
-           
+                System.out.println(Experiment2UnitTests.testInitializeTridiagonalMatrix());
+                //System.out.println(Experiment2UnitTests.testStore());
+                //System.out.println(Experiment2UnitTests.testRetrieve());
                 break;
             case "4":
                 System.out.println(Experiment3UnitTests.testGetNumberOfTerms());

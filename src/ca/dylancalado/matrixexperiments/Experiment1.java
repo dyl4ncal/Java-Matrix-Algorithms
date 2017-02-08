@@ -16,10 +16,10 @@ public class Experiment1
         
         rowMajorAccess(100, 100, m1, rowMajorMapping(m1, matrix1));
         Timer.endTimer();
-        System.out.println("Row-major access time: " + Timer.calculateSortTime() + " nanoseconds");
+        System.out.println("Row-major access time: " + Timer.calculateRunTime() + " nanoseconds");
         columnMajorAccess(100, 100, m1, columnMajorMapping(m1, matrix1));
         Timer.endTimer();
-        System.out.println("Column-major access time: " + Timer.calculateSortTime() + " nanoseconds\n");
+        System.out.println("Column-major access time: " + Timer.calculateRunTime() + " nanoseconds\n");
         
         //Performance test on row-major access vs column-major access for 1000x1000 matrix.
         System.out.println("1000x1000 Matrix:");
@@ -29,10 +29,10 @@ public class Experiment1
         
         rowMajorAccess(1000, 1000, m2, rowMajorMapping(m2, matrix2));
         Timer.endTimer();
-        System.out.println("Row-major access time: " + Timer.calculateSortTime() + " nanoseconds");
+        System.out.println("Row-major access time: " + Timer.calculateRunTime() + " nanoseconds");
         columnMajorAccess(1000, 1000, m2, columnMajorMapping(m2, matrix2));
         Timer.endTimer();
-        System.out.println("Column-major access time: " + Timer.calculateSortTime() + " nanoseconds\n");
+        System.out.println("Column-major access time: " + Timer.calculateRunTime() + " nanoseconds\n");
         
         //Performance test on row-major access vs column-major access for 10000x10000 matrix.
         System.out.println("10000x10000 Matrix:");
@@ -42,10 +42,10 @@ public class Experiment1
         
         rowMajorAccess(10000, 10000, m3, rowMajorMapping(m3, matrix3));
         Timer.endTimer();
-        System.out.println("Row-major access time: " + Timer.calculateSortTime() + " nanoseconds");
+        System.out.println("Row-major access time: " + Timer.calculateRunTime() + " nanoseconds");
         columnMajorAccess(10000, 10000, m3, columnMajorMapping(m3, matrix3));
         Timer.endTimer();
-        System.out.println("Column-major access time: " + Timer.calculateSortTime() + " nanoseconds");
+        System.out.println("Column-major access time: " + Timer.calculateRunTime() + " nanoseconds");
     }
     
     //Maps a 2D array onto a 1D array using row-major mapping.

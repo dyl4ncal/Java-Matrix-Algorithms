@@ -8,7 +8,7 @@ public class Timer
 {
     private static long tStart;
     private static long tFinish;
-    private static long totalSortTime;
+    private static long totalRunTime;
     
     public static long startTimer()
     {
@@ -22,9 +22,9 @@ public class Timer
          return tFinish;
     }
     
-    public static long calculateSortTime()
+    public static long calculateRunTime()
     {
-        totalSortTime = tFinish - tStart;
-        return totalSortTime;
+        totalRunTime = tFinish - tStart;
+        return totalRunTime;
     }
 }

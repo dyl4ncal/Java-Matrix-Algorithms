@@ -1,4 +1,4 @@
-package ca.dylancalado.matrixexperiments.unittests;
+package ca.dylancalado.unittests;
 
 import ca.dylancalado.matrixexperiments.Experiment1;
 import ca.dylancalado.matrixexperiments.Matrix;

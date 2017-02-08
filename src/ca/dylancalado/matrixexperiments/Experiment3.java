@@ -26,12 +26,12 @@ public class Experiment3
         storeNonZeroEntries(m, matrix);
         transposeSparseMatrix(rowNum, colNum, value);
         Timer.endTimer();
-        System.out.println("Linear complexity algorithm time: " + Timer.calculateSortTime() + " nanoseconds\n");
+        System.out.println("Linear complexity algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
         
         
         inefficientTranspose(matrix);
         Timer.endTimer();
-        System.out.println("Inefficient algorithm time: " + Timer.calculateSortTime() + " nanoseconds\n");
+        System.out.println("Inefficient algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
     }
     
     //Method to create a sparse matrix where ~1% of elements are nonzero.
