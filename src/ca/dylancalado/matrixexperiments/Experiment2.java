@@ -89,7 +89,7 @@ public class Experiment2
                 break;
             default:
                 break;
-        }     
+        }
     }
     
     public static int retrieve(int i, int j)
@@ -104,7 +104,7 @@ public class Experiment2
             case -1:
                 return value = array[i];
             default:
-                value = 69;
+                value = 0;
                 break;
         }
         return value;

@@ -97,8 +97,6 @@ public class UI
                 break;
             case "3":
                 System.out.println(Experiment2UnitTests.testInitializeTridiagonalMatrix());
-                //System.out.println(Experiment2UnitTests.testStore());
-                //System.out.println(Experiment2UnitTests.testRetrieve());
                 break;
             case "4":
                 System.out.println(Experiment3UnitTests.testGetNumberOfTerms());
