@@ -4,7 +4,11 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- *
+ * This experiment stores a tri-diagonal matrix in a one dimensional 
+ * array diagonal-wise(top diagonal, main, then lower) with initialize,
+ * store and retrieve operations.
+ * 
+ * 
  * @author Dylan
  */
 public class Experiment2 
@@ -16,8 +20,15 @@ public class Experiment2
     {
         Matrix m = new Matrix(4, 4);
         int[][] tdMatrix = initializeTridiagonalMatrix(m);
-        System.out.println("Initializing a tri-diagonal matrix: \n" 
-               + Arrays.deepToString(tdMatrix) + "\n");
+        System.out.println("Initializing a tri-diagonal matrix: \n");
+        for (int i = 0; i < tdMatrix.length; i++)
+        {
+            for (int j = 0; j < tdMatrix[i].length; j++)
+            {
+                System.out.print(tdMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
         
         System.out.println("Storing tri-diagonal matrix to a 1d array(order: upper,main,lower):");
         for(int i = 0; i <= m.getNumRows(); i++)

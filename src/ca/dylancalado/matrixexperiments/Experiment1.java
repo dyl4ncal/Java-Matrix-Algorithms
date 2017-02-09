@@ -1,7 +1,10 @@
 package ca.dylancalado.matrixexperiments;
 
 /**
- *
+ * This experiment compares the performance of row-major vs
+ * column major access on large 2D arrays of different sizes.
+ * 
+ * 
  * @author Dylan
  */
 public class Experiment1 

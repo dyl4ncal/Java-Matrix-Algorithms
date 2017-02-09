@@ -9,14 +9,15 @@ import java.io.IOException;
 import java.util.Scanner;
 
 /**
- *
+ * A user friendly interface which acts as a menu for navigation
+ * and use of experiments and unit tests.
+ * 
  * @author Dylan
  */
 public class UI
 {
     private static Scanner userInput = new Scanner(System.in);
-    
-    //User interface which provides a user-friendly menu for navigation.
+  
     public static void runUI() throws IOException
     {
         while (true)

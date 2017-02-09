@@ -4,7 +4,8 @@ import static ca.dylancalado.matrixexperiments.Experiment2.*;
 import ca.dylancalado.matrixexperiments.Matrix;
 
 /**
- *
+ * Unit testing related to methods in experiment 2.
+ * 
  * @author Dylan
  */
 public class Experiment2UnitTests 

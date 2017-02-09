@@ -1,7 +1,8 @@
 package ca.dylancalado.matrixexperiments;
 
 /**
- *
+ * A timing class for testing the runtime performance of pieces of code.
+ * 
  * @author Dylan
  */
 public class Timer

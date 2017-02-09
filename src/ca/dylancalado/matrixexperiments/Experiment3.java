@@ -1,9 +1,12 @@
 package ca.dylancalado.matrixexperiments;
 
+import java.util.Arrays;
 import java.util.Random;
 
 /**
- *
+ * This experiment compares the performance of transposing a sparse matrix
+ * using two different algorithms.
+ * 
  * @author Dylan
  */
 public class Experiment3 
@@ -15,23 +18,29 @@ public class Experiment3
     private static int[] valueTransposed;
     private static int[] rowNumTransposed;
     private static int[] colNumTransposed;
-            
+    private static int[][] originalMatrix;
+    
+    //I experimented on a 3000x3000 matrix as anything larger would take long to transpose.
+    //10000x10000 matrix couldn't be transposed given two hours unfortunately.
     public static void runExperiment3()
     {
-        System.out.println("Transposing a Sparse Matrix (Linear Complexity Algorithm VS Inefficient Algorithm) Experiment:\n");
+        System.out.println("Transposing a 3000x3000 Sparse Matrix (Linear Complexity Algorithm VS Inefficient Algorithm) Experiment:\n");
         
-        Matrix m = new Matrix(10000, 10000);
-        int[][] matrix = buildSparseMatrix(m);
-        numTerms = getNumberOfTerms(m, matrix);
-        storeNonZeroEntries(m, matrix);
+        Matrix m1 = new Matrix(3000, 3000);
+        int[][] matrix1 = buildSparseMatrix(m1);
+        numTerms = getNumberOfTerms(m1, matrix1);
+        storeNonZeroEntries(m1, matrix1);
         transposeSparseMatrix(rowNum, colNum, value);
         Timer.endTimer();
         System.out.println("Linear complexity algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
         
         
-        inefficientTranspose(matrix);
+        Matrix m2 = new Matrix(3000, 3000);
+        int[][] matrix2 = buildSparseMatrix(m2);
+        int[][] transposedMatrix = inefficientTranspose(matrix2);
         Timer.endTimer();
         System.out.println("Inefficient algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
+        System.out.print("Sparse matrix transpose correct? " + checkTransposeCorrectness(transposedMatrix));
     }
     
     //Method to create a sparse matrix where ~1% of elements are nonzero.
@@ -58,6 +67,7 @@ public class Experiment3
             int randomIndex2 = r.nextInt(maxIndex - minIndex) + minIndex;
             sparseMatrix[randomIndex1][randomIndex2] = r.nextInt(100);
         }
+        originalMatrix = sparseMatrix;
         return sparseMatrix;
     }
     
@@ -136,7 +146,7 @@ public class Experiment3
     }
     
     //Bad method for transposing a large sparse matrix.
-    public static void inefficientTranspose(int[][] matrix)
+    public static int[][] inefficientTranspose(int[][] matrix)
     {
         Timer.startTimer();
         
@@ -149,6 +159,22 @@ public class Experiment3
                 matrix[row][column] = matrix[column][row];
                 matrix[column][row] = value;
             }
+        }
+        return matrix;
+    }
+    
+    //Check if the transpose is correct by transposing a second time,
+    //which should produce a matrix identical to the original.
+    public static boolean checkTransposeCorrectness(int[][] transposedMatrix)
+    {
+        
+        if(Arrays.equals(transposedMatrix, originalMatrix))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     
@@ -186,7 +212,36 @@ public class Experiment3
 /*
 
 *************Output******************
+run:
 
+Matrix Experiments Main Menu:
+-----------------------------
+1. Run Experiment by Number
+2. Run Related Unit Tests
+3. Run All Unit Tests
+4. Exit Program
+1
+Pick an experiment to run:
+1. Experiment 1 
+2. Experiment 2
+3. Experiment 3
 
+3
+Transposing a 3000x3000 Sparse Matrix (Linear Complexity Algorithm VS Inefficient Algorithm) Experiment:
 
+Linear complexity algorithm time: 3939917 nanoseconds
+
+Inefficient algorithm time: 55596050 nanoseconds
+
+Sparse matrix transpose correct? true
+Experiment 3 complete!
+
+Matrix Experiments Main Menu:
+-----------------------------
+1. Run Experiment by Number
+2. Run Related Unit Tests
+3. Run All Unit Tests
+4. Exit Program
+4
+BUILD SUCCESSFUL (total time: 16 minutes 6 seconds)
 */

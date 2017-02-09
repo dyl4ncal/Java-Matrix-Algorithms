@@ -3,7 +3,8 @@ package ca.dylancalado.unittests;
 import ca.dylancalado.matrixexperiments.Matrix;
 
 /**
- *
+ * Unit testing related to Matrix objects.
+ * 
  * @author Dylan
  */
 public class MatrixUnitTests

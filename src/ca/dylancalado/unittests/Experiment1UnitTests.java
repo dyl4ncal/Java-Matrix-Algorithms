@@ -5,7 +5,8 @@ import ca.dylancalado.matrixexperiments.Matrix;
 import java.util.Arrays;
 
 /**
- *
+ * Unit testing related to methods in experiment 1.
+ * 
  * @author Dylan
  */
 public class Experiment1UnitTests 
