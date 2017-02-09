@@ -1,6 +1,5 @@
 package ca.dylancalado.matrixexperiments;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -20,7 +19,7 @@ public class Experiment2
     {
         Matrix m = new Matrix(4, 4);
         int[][] tdMatrix = initializeTridiagonalMatrix(m);
-        System.out.println("Initializing a tri-diagonal matrix: \n");
+        System.out.println("Initializing a tri-diagonal matrix:");
         for (int i = 0; i < tdMatrix.length; i++)
         {
             for (int j = 0; j < tdMatrix[i].length; j++)
@@ -30,7 +29,7 @@ public class Experiment2
             System.out.println();
         }
         
-        System.out.println("Storing tri-diagonal matrix to a 1d array(order: upper,main,lower):");
+        System.out.println("\nStoring tri-diagonal matrix to a 1d array(order: upper,main,lower):");
         for(int i = 0; i <= m.getNumRows(); i++)
         {
             for(int j = 0; j <= m.getNumRows(); j++)
@@ -140,16 +139,20 @@ Pick an experiment to run:
 3. Experiment 3
 
 2
-Initializing a tri-diagonal matrix: 
-[[96, 93, 0, 0, 0], [16, 14, 18, 0, 0], [0, 94, 50, 88, 0], [0, 0, 63, 87, 38], [0, 0, 0, 20, 4]]
+Initializing a tri-diagonal matrix:
+26 30 0 0 0 
+35 14 44 0 0 
+0 25 86 41 0 
+0 0 91 49 97 
+0 0 0 51 35 
 
 Storing tri-diagonal matrix to a 1d array(order: upper,main,lower):
-93 18 88 38 96 14 50 87 4 16 94 63 20 
+30 44 41 97 26 14 86 49 35 35 25 91 51 
 
 Retrieving a value from 1d array(based on indices of tri-diagonal matrix): 
-From top diagonal: 93
-From main diagonal: 50
-From lower diagonal: 94
+From top diagonal: 30
+From main diagonal: 86
+From lower diagonal: 25
 
 Experiment 2 complete!
 
@@ -160,5 +163,5 @@ Matrix Experiments Main Menu:
 3. Run All Unit Tests
 4. Exit Program
 4
-BUILD SUCCESSFUL (total time: 7 seconds)
+BUILD SUCCESSFUL (total time: 2 seconds)
 */
