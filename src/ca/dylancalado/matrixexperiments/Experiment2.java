@@ -19,7 +19,9 @@ public class Experiment2
     {
         Matrix m = new Matrix(4, 4);
         int[][] tdMatrix = initializeTridiagonalMatrix(m);
+        
         System.out.println("Initializing a tri-diagonal matrix:");
+        
         for (int i = 0; i < tdMatrix.length; i++)
         {
             for (int j = 0; j < tdMatrix[i].length; j++)
@@ -29,7 +31,9 @@ public class Experiment2
             System.out.println();
         }
         
-        System.out.println("\nStoring tri-diagonal matrix to a 1d array(order: upper,main,lower):");
+        System.out.println("\nStoring tri-diagonal matrix to "
+                + "a 1d array(order: upper,main,lower):");
+        
         for(int i = 0; i <= m.getNumRows(); i++)
         {
             for(int j = 0; j <= m.getNumRows(); j++)
@@ -43,7 +47,8 @@ public class Experiment2
         }
         
         
-        System.out.println("\n\nRetrieving a value from 1d array(based on indices of tri-diagonal matrix): \n"
+        System.out.println("\n\nRetrieving a value from 1d array"
+                + "(based on indices of tri-diagonal matrix): \n"
                 + "From top diagonal: " + retrieve(0,1)
                 + "\nFrom main diagonal: " + retrieve(2,2)
                 + "\nFrom lower diagonal: " + retrieve(2,1));

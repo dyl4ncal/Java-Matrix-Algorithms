@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * This experiment compares the performance of transposing a sparse matrix
- * using two different algorithms.
+ * This experiment compares the performance of transposing
+ * a sparse matrix using two different algorithms.
  * 
  * @author Dylan
  */
@@ -24,7 +24,8 @@ public class Experiment3
     //10000x10000 matrix couldn't be transposed given two hours unfortunately.
     public static void runExperiment3()
     {
-        System.out.println("Transposing a 3000x3000 Sparse Matrix (Linear Complexity Algorithm VS Inefficient Algorithm) Experiment:\n");
+        System.out.println("Transposing a 3000x3000 Sparse Matrix "
+                + "(Linear Complexity Algorithm VS Inefficient Algorithm) Experiment:\n");
         
         Matrix m1 = new Matrix(3000, 3000);
         int[][] matrix1 = buildSparseMatrix(m1);
@@ -32,15 +33,21 @@ public class Experiment3
         storeNonZeroEntries(m1, matrix1);
         transposeSparseMatrix(rowNum, colNum, value);
         Timer.endTimer();
-        System.out.println("Linear complexity algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
+        
+        System.out.println("Linear complexity algorithm time: "
+                + Timer.calculateRunTime() + " nanoseconds\n");
         
         
         Matrix m2 = new Matrix(3000, 3000);
         int[][] matrix2 = buildSparseMatrix(m2);
         int[][] transposedMatrix = inefficientTranspose(matrix2);
         Timer.endTimer();
-        System.out.println("Inefficient algorithm time: " + Timer.calculateRunTime() + " nanoseconds\n");
-        System.out.print("Sparse matrix transpose correct? " + checkTransposeCorrectness(transposedMatrix));
+        
+        System.out.println("Inefficient algorithm time: "
+                + Timer.calculateRunTime() + " nanoseconds\n");
+        
+        System.out.print("Sparse matrix transpose correct? "
+                + checkTransposeCorrectness(transposedMatrix));
     }
     
     //Method to create a sparse matrix where ~1% of elements are nonzero.
