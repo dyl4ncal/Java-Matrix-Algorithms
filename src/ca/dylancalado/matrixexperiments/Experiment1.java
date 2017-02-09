@@ -146,5 +146,50 @@ Matrix Experiments Main Menu:
 4. Exit Program
 4
 BUILD SUCCESSFUL (total time: 41 seconds)
-*/
 
+------------------------------------------------
+
+***********All Unit test Results****************
+run:
+
+Matrix Experiments Main Menu:
+-----------------------------
+1. Run Experiment by Number
+2. Run Related Unit Tests
+3. Run All Unit Tests
+4. Exit Program
+3
+Unit Tests Related to Matrices:
+
+Create matrix test passed? true
+Fill matrix test passed? true
+
+Unit Tests Related to Experiment 1:
+
+Row-major mapping test passed? true
+Row-major access test passed? true
+Column-major mapping test passed? true
+Column-major access test passed? true
+
+Unit Tests Related to Experiment 2:
+
+Initialize tridiagonal matrix test passed? true
+
+Unit Tests Related to Experiment 3:
+
+Get number of terms test passed? true
+Build sparse matrix test passed? true
+Store nonzero entries test passed? true
+Transpose sparse matrix test passed? true
+
+
+Matrix Experiments Main Menu:
+-----------------------------
+1. Run Experiment by Number
+2. Run Related Unit Tests
+3. Run All Unit Tests
+4. Exit Program
+4
+BUILD SUCCESSFUL (total time: 2 seconds)
+
+*/

@@ -113,6 +113,7 @@ public class UI
     {
        MatrixUnitTests.testAllMatrixMethods();
        Experiment1UnitTests.testAllExperimentMethods();
+       Experiment2UnitTests.testAllExperimentMethods();
        Experiment3UnitTests.testAllExperimentMethods();
     }
 }
